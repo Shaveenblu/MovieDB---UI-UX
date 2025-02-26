@@ -5,6 +5,7 @@ import './App.css'
 import Practice from './components/Practice'
 import Search from './Componenets/Search'
 import Spinner from './Componenets/Spinner'
+import MovieCard from './Componenets/MovieCard'
 
 // 3 or 4
 API_BASE_URL = 'https://api.themoviedb.org/3'
@@ -85,9 +86,7 @@ function App() {
               ) : (
                 <ul>
                   {movieList.map((movie) => {
-                    <p key={movie.id} className='text-white'>
-                      {movie.title}
-                    </p> 
+                    <MovieCard key={movie.id} movie={movie}/>
                   })}
                 </ul>
               )}
